@@ -1,0 +1,19 @@
+{
+  "name": "tibisoft/notifications",
+  "description": "A way to send your notifications",
+  "authors": [
+    {
+      "name": "Willem Turkstra",
+      "email": "willemturkstra@tibisoft.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "symfony/symfony": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tibisoft\\Notifications\\": "",
+    }
+  }
+}
