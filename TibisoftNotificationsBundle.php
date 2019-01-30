@@ -8,7 +8,9 @@
 
 namespace Tibisoft\Notifications;
 
-class TibisoftNotificationsBundle
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class TibisoftNotificationsBundle extends Bundle
 {
 
 }
