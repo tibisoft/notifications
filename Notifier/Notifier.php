@@ -6,21 +6,25 @@
  * Time: 23:46
  */
 
-namespace Tibisoft\Notifications\Notification;
-
+namespace Tibisoft\Notifications\Notifier;
 
 use Tibisoft\Notifications\Channel\ChannelInterface;
 use Tibisoft\Notifications\Message\MessageInterface;
 
-class Notification implements NotificationInterface
+/**
+ * Class Notifier
+ * @package Tibisoft\Notifications\Notification
+ */
+class Notifier extends AbstractNotifier
 {
+    /**
+     * @param MessageInterface $message
+     * @return mixed|void
+     */
     public function send(MessageInterface $message)
     {
-        //find sendable channels
-        $channels = [];
-
         /** @var ChannelInterface $channel */
-        foreach($channels as $channel) {
+        foreach($this->channels as $channel) {
             if ($channel->canSend($message)) {
                 $channel->send($message);
             }
